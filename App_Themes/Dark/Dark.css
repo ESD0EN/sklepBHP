@@ -1,0 +1,60 @@
+﻿body {
+    margin: 0;
+    color: #F1F6F9;
+}
+
+header {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #212A3E;
+}
+
+footer {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #212A3E;
+}
+
+.menu {
+    text-align: center;
+}
+
+a {
+    color: #F1F6F9;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.content-placeholder {
+    background-color: #394867;
+    padding: 20px 10px 20px 10px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
