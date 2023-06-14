@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-placeholder">
-        <asp:GridView ID="defaultGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="defaultSqlDataSource">
+        <asp:GridView ID="defaultGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="defaultSqlDataSource" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                 <asp:BoundField DataField="Nazwa" HeaderText="Nazwa" SortExpression="Nazwa" />

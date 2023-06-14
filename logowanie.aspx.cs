@@ -46,7 +46,7 @@ namespace sklepBHP
             }
             else
             {
-                loginLabel.Text = "Nie działa";
+                loginLabel.Text = "Nie ma takiego użytkownika";
                 clearTextBox();
             }
         }
