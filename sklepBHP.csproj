@@ -67,62 +67,70 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adresKlienta.aspx" />
     <Content Include="App_Themes\Dark\Dark.css" />
     <Content Include="App_Themes\Light\Light.css" />
-    <Content Include="klient.aspx" />
-    <Content Include="pozycjeZamowienia.aspx" />
-    <Content Include="zamowienia.aspx" />
-    <Content Include="produkty.aspx" />
+    <Content Include="kategorieAdmin.aspx" />
+    <Content Include="klientAdmin.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="pozycjeZamowieniaAdmin.aspx" />
+    <Content Include="zamowieniaAdmin.aspx" />
+    <Content Include="produktyAdmin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adresKlienta.aspx.cs">
-      <DependentUpon>adresKlienta.aspx</DependentUpon>
+    <Compile Include="kategorieAdmin.aspx.cs">
+      <DependentUpon>kategorieAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adresKlienta.aspx.designer.cs">
-      <DependentUpon>adresKlienta.aspx</DependentUpon>
+    <Compile Include="kategorieAdmin.aspx.designer.cs">
+      <DependentUpon>kategorieAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="klient.aspx.cs">
-      <DependentUpon>klient.aspx</DependentUpon>
+    <Compile Include="klientAdmin.aspx.cs">
+      <DependentUpon>klientAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="klient.aspx.designer.cs">
-      <DependentUpon>klient.aspx</DependentUpon>
+    <Compile Include="klientAdmin.aspx.designer.cs">
+      <DependentUpon>klientAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="masterPage.Master.cs">
-      <DependentUpon>masterPage.Master</DependentUpon>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="masterPage.Master.designer.cs">
-      <DependentUpon>masterPage.Master</DependentUpon>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pozycjeZamowienia.aspx.cs">
-      <DependentUpon>pozycjeZamowienia.aspx</DependentUpon>
+    <Compile Include="masterPageAdmin.Master.cs">
+      <DependentUpon>masterPageAdmin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pozycjeZamowienia.aspx.designer.cs">
-      <DependentUpon>pozycjeZamowienia.aspx</DependentUpon>
+    <Compile Include="masterPageAdmin.Master.designer.cs">
+      <DependentUpon>masterPageAdmin.Master</DependentUpon>
     </Compile>
-    <Compile Include="zamowienia.aspx.cs">
-      <DependentUpon>zamowienia.aspx</DependentUpon>
+    <Compile Include="pozycjeZamowieniaAdmin.aspx.cs">
+      <DependentUpon>pozycjeZamowieniaAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="zamowienia.aspx.designer.cs">
-      <DependentUpon>zamowienia.aspx</DependentUpon>
+    <Compile Include="pozycjeZamowieniaAdmin.aspx.designer.cs">
+      <DependentUpon>pozycjeZamowieniaAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="produkty.aspx.cs">
-      <DependentUpon>produkty.aspx</DependentUpon>
+    <Compile Include="zamowieniaAdmin.aspx.cs">
+      <DependentUpon>zamowieniaAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produkty.aspx.designer.cs">
-      <DependentUpon>produkty.aspx</DependentUpon>
+    <Compile Include="zamowieniaAdmin.aspx.designer.cs">
+      <DependentUpon>zamowieniaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="produktyAdmin.aspx.cs">
+      <DependentUpon>produktyAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produktyAdmin.aspx.designer.cs">
+      <DependentUpon>produktyAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="masterPage.Master" />
+    <Content Include="masterPageAdmin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

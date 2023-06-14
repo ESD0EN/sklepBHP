@@ -11,124 +11,133 @@ namespace sklepBHP
 {
 
 
-    public partial class adress
+    public partial class products
     {
 
         /// <summary>
-        /// Kontrolka txtUlica.
+        /// Kontrolka txtNazwa.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUlica;
+        protected global::System.Web.UI.WebControls.TextBox txtNazwa;
 
         /// <summary>
-        /// Kontrolka rfvUlica.
+        /// Kontrolka rfvNazwa.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUlica;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNazwa;
 
         /// <summary>
-        /// Kontrolka txtNumerDomu.
+        /// Kontrolka txtOpis.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumerDomu;
+        protected global::System.Web.UI.WebControls.TextBox txtOpis;
 
         /// <summary>
-        /// Kontrolka txtKodPocztowy.
+        /// Kontrolka katDropDownList.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKodPocztowy;
+        protected global::System.Web.UI.WebControls.DropDownList katDropDownList;
 
         /// <summary>
-        /// Kontrolka rfvKodPocztowy.
+        /// Kontrolka katSqlDataSource.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvKodPocztowy;
+        protected global::System.Web.UI.WebControls.SqlDataSource katSqlDataSource;
 
         /// <summary>
-        /// Kontrolka revKodPocztowy.
+        /// Kontrolka txtCena.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revKodPocztowy;
+        protected global::System.Web.UI.WebControls.TextBox txtCena;
 
         /// <summary>
-        /// Kontrolka txtMiasto.
+        /// Kontrolka rfvCena.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMiasto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCena;
 
         /// <summary>
-        /// Kontrolka rfvMiasto.
+        /// Kontrolka revCena.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMiasto;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCena;
 
         /// <summary>
-        /// Kontrolka txtKraj.
+        /// Kontrolka txtStanMagazynowy.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKraj;
+        protected global::System.Web.UI.WebControls.TextBox txtStanMagazynowy;
 
         /// <summary>
-        /// Kontrolka rfvKraj.
+        /// Kontrolka rfvStanMagazynowy.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvKraj;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStanMagazynowy;
 
         /// <summary>
-        /// Kontrolka btnDodajAdres.
+        /// Kontrolka revStanMagazynowy.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDodajAdres;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revStanMagazynowy;
 
         /// <summary>
-        /// Kontrolka adresGridView.
+        /// Kontrolka dodajButton.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView adresGridView;
+        protected global::System.Web.UI.WebControls.Button dodajButton;
 
         /// <summary>
-        /// Kontrolka adresSqlDataSource.
+        /// Kontrolka produktyGridView.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource adresSqlDataSource;
+        protected global::System.Web.UI.WebControls.GridView produktyGridView;
+
+        /// <summary>
+        /// Kontrolka produktySqlDataSource.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource produktySqlDataSource;
     }
 }

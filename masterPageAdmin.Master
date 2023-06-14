@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPageAdmin.Master.cs" Inherits="sklepBHP.masterPage"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="App_Themes/Dark/Dark.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="width:100%">
+        <div class="pudelko">
+            <header>
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="menu">
+                    <Items>
+                        <asp:MenuItem Text="Produkty" Value="Produkty" NavigateUrl="~/produktyAdmin.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Kategorie" Value="Kategorie" NavigateUrl="~/kategorieAdmin.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Klienci" Value="Klienci" NavigateUrl="~/klientAdmin.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Zamówienia" Value="Zamówienia" NavigateUrl="~/zamowieniaAdmin.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Pozycje zamówienia" Value="Pozycje zamówienia" NavigateUrl="~/pozycjeZamowieniaAdmin.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                Projekt Aplikacje Internetowe II | Szymon Figger 19720
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

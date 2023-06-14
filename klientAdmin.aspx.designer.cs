@@ -51,33 +51,6 @@ namespace sklepBHP
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNazwisko;
 
         /// <summary>
-        /// Kontrolka txtNumerTelefonu.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumerTelefonu;
-
-        /// <summary>
-        /// Kontrolka rfvNumerTelefonu.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNumerTelefonu;
-
-        /// <summary>
-        /// Kontrolka revNumerTelefonu.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNumerTelefonu;
-
-        /// <summary>
         /// Kontrolka txtAdresEmail.
         /// </summary>
         /// <remarks>
@@ -105,31 +78,31 @@ namespace sklepBHP
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revAdresEmail;
 
         /// <summary>
-        /// Kontrolka ddlAdresy.
+        /// Kontrolka txtHaslo.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAdresy;
+        protected global::System.Web.UI.WebControls.TextBox txtHaslo;
 
         /// <summary>
-        /// Kontrolka klientListSqlDataSource.
+        /// Kontrolka rfvHaslo.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource klientListSqlDataSource;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHaslo;
 
         /// <summary>
-        /// Kontrolka rfvAdresy.
+        /// Kontrolka rolaDropDownList.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAdresy;
+        protected global::System.Web.UI.WebControls.DropDownList rolaDropDownList;
 
         /// <summary>
         /// Kontrolka btnDodajKlienta.

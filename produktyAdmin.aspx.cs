@@ -18,17 +18,15 @@ namespace sklepBHP
         {
             string nazwa = txtNazwa.Text;
             string opis = txtOpis.Text;
-            string marka = txtMarka.Text;
-            string kategoria = txtKategoria.Text;
+            int kategoria = katDropDownList.SelectedIndex;
             string cena = txtCena.Text;
             string stanmag = txtStanMagazynowy.Text;
 
             produktySqlDataSource.InsertParameters["Nazwa"].DefaultValue = nazwa;
             produktySqlDataSource.InsertParameters["Opis"].DefaultValue = opis;
-            produktySqlDataSource.InsertParameters["Marka"].DefaultValue = marka;
-            produktySqlDataSource.InsertParameters["Kategoria"].DefaultValue = kategoria;
+            produktySqlDataSource.InsertParameters["Kategoria_ID"].DefaultValue = kategoria.ToString();
             produktySqlDataSource.InsertParameters["Cena"].DefaultValue = cena;
-            produktySqlDataSource.InsertParameters["Stan_magazynowy"].DefaultValue = stanmag;
+            produktySqlDataSource.InsertParameters["Dostepnosc"].DefaultValue = stanmag;
 
             produktySqlDataSource.Insert();
 
@@ -40,8 +38,7 @@ namespace sklepBHP
         {
             txtNazwa.Text = null;
             txtOpis.Text = null;
-            txtMarka.Text = null;
-            txtKategoria.Text = null;
+            katDropDownList.SelectedIndex = 0;
             txtCena.Text = null;
             txtStanMagazynowy.Text = null;
         }

@@ -18,15 +18,15 @@ namespace sklepBHP
         {
             string imie = txtImie.Text;
             string nazwisko = txtNazwisko.Text;
-            string nrtel = txtNumerTelefonu.Text;
             string email = txtAdresEmail.Text;
-            int idadres = ddlAdresy.SelectedIndex;
+            string haslo = txtHaslo.Text;
+            string rola = rolaDropDownList.Text.Trim();
 
-            klientSqlDataSource.InsertParameters["ID_adres_klienta"].DefaultValue = idadres.ToString();
             klientSqlDataSource.InsertParameters["Imie"].DefaultValue = imie;
             klientSqlDataSource.InsertParameters["Nazwisko"].DefaultValue = nazwisko;
-            klientSqlDataSource.InsertParameters["Numer_telefonu"].DefaultValue = nrtel;
-            klientSqlDataSource.InsertParameters["Adres_email"].DefaultValue = email;
+            klientSqlDataSource.InsertParameters["Haslo"].DefaultValue = haslo;
+            klientSqlDataSource.InsertParameters["Email"].DefaultValue = email;
+            klientSqlDataSource.InsertParameters["Rola"].DefaultValue = rola;
 
             klientSqlDataSource.Insert();
 
@@ -37,8 +37,9 @@ namespace sklepBHP
         {
             txtImie.Text = null;
             txtNazwisko.Text = null;
-            txtNumerTelefonu.Text = null;
+            txtHaslo.Text = null;
             txtAdresEmail.Text = null;
+            rolaDropDownList.SelectedIndex = 0;
         }
     }
 }
