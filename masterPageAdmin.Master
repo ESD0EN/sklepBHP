@@ -21,6 +21,7 @@
                         <asp:MenuItem Text="Klienci" Value="Klienci" NavigateUrl="~/klientAdmin.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Zamówienia" Value="Zamówienia" NavigateUrl="~/zamowieniaAdmin.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Pozycje zamówienia" Value="Pozycje zamówienia" NavigateUrl="~/pozycjeZamowieniaAdmin.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Wyloguj się" Value="Wyloguj się" NavigateUrl="~/default.aspx"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </header>
