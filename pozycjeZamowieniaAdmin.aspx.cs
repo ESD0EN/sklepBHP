@@ -17,20 +17,20 @@ namespace sklepBHP
         protected void btnDodajPozycje_Click(object sender, EventArgs e)
         {
             string ilosc = txtIloscZamowionych.Text;
-            int zamowienieID = ddlZamowienie.SelectedIndex + 1;
-            int produktID = ddlProdukt.SelectedIndex + 1;
+            int zamowienieID = Int32.Parse(ddlZamowienie.Text.Trim());
+            int produktID = Int32.Parse(ddlProdukt.Text.Trim());
 
-            pozycjeSqlDataSource.InsertParameters["ID_zamowienia"].DefaultValue = zamowienieID.ToString();
-            pozycjeSqlDataSource.InsertParameters["ID_produkt"].DefaultValue = produktID.ToString();
-            pozycjeSqlDataSource.InsertParameters["Ilosc_zamowionych_produktow"].DefaultValue = ilosc;
+            pozycjeSqlDataSource.InsertParameters["Zamowienie_ID"].DefaultValue = zamowienieID.ToString();
+            pozycjeSqlDataSource.InsertParameters["Produkt_ID"].DefaultValue = produktID.ToString();
+            pozycjeSqlDataSource.InsertParameters["Ilosc"].DefaultValue = ilosc;
 
             pozycjeSqlDataSource.Insert();
 
             pozycjeGridView.DataBind();
 
             txtIloscZamowionych.Text = null;
-            ddlProdukt.SelectedIndex = -1;
-            ddlZamowienie.SelectedIndex = -1;
+            ddlProdukt.SelectedIndex = 0;
+            ddlZamowienie.SelectedIndex = 0;
         }
     }
 }

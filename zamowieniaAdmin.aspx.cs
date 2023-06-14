@@ -18,16 +18,17 @@ namespace sklepBHP
         {
             string data = txtDataZamowienia.Text;
             string status = ddlStatusZamowienia.Text.Trim();
-            int idklient = ddlKlienci.SelectedIndex + 1;
+            int idklient = Int32.Parse(ddlKlienci.Text.Trim());
 
-            zamowieniaSqlDataSource.InsertParameters["ID_klient"].DefaultValue = idklient.ToString();
-            zamowieniaSqlDataSource.InsertParameters["Data_zamowienia"].DefaultValue = data;
-            zamowieniaSqlDataSource.InsertParameters["Status_zamowienia"].DefaultValue = status;
+            zamowieniaSqlDataSource.InsertParameters["Uzytkownik_ID"].DefaultValue = idklient.ToString();
+            zamowieniaSqlDataSource.InsertParameters["Data"].DefaultValue = data;
+            zamowieniaSqlDataSource.InsertParameters["Status"].DefaultValue = status;
 
             zamowieniaSqlDataSource.Insert();
 
             zamowieniaGridView.DataBind();
-            ddlKlienci.SelectedIndex = -1;
+            ddlStatusZamowienia.SelectedIndex = 0;
+            ddlKlienci.SelectedIndex = 0;
             txtDataZamowienia.Text = null;
         }
     }

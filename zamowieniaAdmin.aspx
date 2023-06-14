@@ -16,44 +16,42 @@
             </asp:DropDownList>
             <asp:RequiredFieldValidator ID="rfvStatusZamowienia" runat="server" ControlToValidate="ddlStatusZamowienia" InitialValue="" ErrorMessage="Wybierz status zamówienia" ValidationGroup="AddOrderValidation"></asp:RequiredFieldValidator>
             <br />
-            Klient <asp:DropDownList ID="ddlKlienci" runat="server" ValidationGroup="AddOrderValidation" DataSourceID="zamowienielistSqlDataSource" DataTextField="Klient" DataValueField="ID_klient"></asp:DropDownList>
-            <asp:SqlDataSource ID="zamowienielistSqlDataSource" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;D:\sem6\aplikacje_internetowe\_projekt\etap 3\sklepBHP.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT Imie + ' ' + Nazwisko + ', ' + Numer_telefonu AS Klient, ID_klient FROM Klienci" ProviderName="System.Data.SqlClient"></asp:SqlDataSource>
-            <asp:RequiredFieldValidator ID="rfvKlienci" runat="server" ControlToValidate="ddlKlienci" InitialValue="" ErrorMessage="Wybierz klienta" ValidationGroup="AddOrderValidation"></asp:RequiredFieldValidator>
+            Klient <asp:DropDownList ID="ddlKlienci" runat="server" ValidationGroup="AddOrderValidation" DataSourceID="zamowienielistSqlDataSource" DataTextField="Klient" DataValueField="ID"></asp:DropDownList>
+            <asp:SqlDataSource ID="zamowienielistSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:BHPConnectionString %>" SelectCommand="SELECT [ID], [Imie] +' '+ [Nazwisko] as Klient FROM [Uzytkownicy]"></asp:SqlDataSource>
             <br />
             <asp:Button ID="btnDodajZamowienie" runat="server" Text="Dodaj zamówienie" OnClick="btnDodajZamowienie_Click" ValidationGroup="AddOrderValidation" />
             <br />
-            <asp:GridView ID="zamowieniaGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_zamowienia" DataSourceID="zamowieniaSqlDataSource">
+            <asp:GridView ID="zamowieniaGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="zamowieniaSqlDataSource">
                 <Columns>
-                    <asp:BoundField DataField="ID_zamowienia" HeaderText="ID_zamowienia" InsertVisible="False" ReadOnly="True" SortExpression="ID_zamowienia" />
-                    <asp:BoundField DataField="Data_zamowienia" HeaderText="Data_zamowienia" SortExpression="Data_zamowienia" />
-                    <asp:BoundField DataField="Status_zamowienia" HeaderText="Status_zamowienia" SortExpression="Status_zamowienia" />
-                    <asp:BoundField DataField="ID_klient" HeaderText="ID_klient" SortExpression="ID_klient" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Data" HeaderText="Data" SortExpression="Data" />
+                    <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                    <asp:BoundField DataField="Uzytkownik_ID" HeaderText="Uzytkownik_ID" SortExpression="Uzytkownik_ID" />
                     <asp:BoundField DataField="Imie" HeaderText="Imie" SortExpression="Imie" ReadOnly="True" />
                     <asp:BoundField DataField="Nazwisko" HeaderText="Nazwisko" SortExpression="Nazwisko" ReadOnly="True" />
-                    <asp:BoundField DataField="Numer_telefonu" HeaderText="Numer_telefonu" SortExpression="Numer_telefonu" ReadOnly="True" />
-                    <asp:BoundField DataField="Adres_email" HeaderText="Adres_email" SortExpression="Adres_email" ReadOnly="True" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />
                     <asp:CommandField ShowEditButton="True" />
                     <asp:CommandField ShowDeleteButton="True" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="zamowieniaSqlDataSource" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;D:\sem6\aplikacje_internetowe\_projekt\etap 3\sklepBHP.mdf&quot;;Integrated Security=True;Connect Timeout=30" 
-                DeleteCommand="DELETE FROM [Zamowienia] WHERE [ID_zamowienia] = @ID_zamowienia" 
-                InsertCommand="INSERT INTO [Zamowienia] ([ID_klient], [Data_zamowienia], [Status_zamowienia]) VALUES (@ID_klient, @Data_zamowienia, @Status_zamowienia)" 
-                SelectCommand="SELECT Zamowienia.ID_zamowienia, Zamowienia.Data_zamowienia, Zamowienia.Status_zamowienia, Zamowienia.ID_klient, Klienci.Imie, Klienci.Nazwisko, Klienci.Numer_telefonu, Klienci.Adres_email FROM Zamowienia INNER JOIN Klienci ON Zamowienia.ID_klient = Klienci.ID_klient" 
-                UpdateCommand="UPDATE [Zamowienia] SET [ID_klient] = @ID_klient, [Data_zamowienia] = @Data_zamowienia, [Status_zamowienia] = @Status_zamowienia WHERE [ID_zamowienia] = @ID_zamowienia" ProviderName="System.Data.SqlClient">
+            <asp:SqlDataSource ID="zamowieniaSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:BHPConnectionString %>" 
+                DeleteCommand="DELETE FROM [Zamowienia] WHERE [ID] = @ID" 
+                InsertCommand="INSERT INTO [Zamowienia] ([Uzytkownik_ID], [Data], [Status]) VALUES (@Uzytkownik_ID, @Data, @Status)" 
+                SelectCommand="SELECT Zamowienia.ID, Zamowienia.Data, Zamowienia.Status, Zamowienia.Uzytkownik_ID, Uzytkownicy.Imie, Uzytkownicy.Nazwisko, Uzytkownicy.Email FROM Zamowienia INNER JOIN Uzytkownicy ON Zamowienia.Uzytkownik_ID = Uzytkownicy.ID" 
+                UpdateCommand="UPDATE [Zamowienia] SET [Uzytkownik_ID] = @Uzytkownik_ID, [Data] = @Data, [Status] = @Status WHERE [ID] = @ID">
                 <DeleteParameters>
-                    <asp:Parameter Name="ID_zamowienia" Type="Int32" />
+                    <asp:Parameter Name="ID" Type="Int32" />
                 </DeleteParameters>
                 <InsertParameters>
-                    <asp:Parameter Name="ID_klient" Type="Int32" />
-                    <asp:Parameter DbType="Date" Name="Data_zamowienia" />
-                    <asp:Parameter Name="Status_zamowienia" Type="String" />
+                    <asp:Parameter Name="Uzytkownik_ID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="Data" />
+                    <asp:Parameter Name="Status" Type="String" />
                 </InsertParameters>
                 <UpdateParameters>
-                    <asp:Parameter Name="ID_klient" Type="Int32" />
-                    <asp:Parameter DbType="Date" Name="Data_zamowienia" />
-                    <asp:Parameter Name="Status_zamowienia" Type="String" />
-                    <asp:Parameter Name="ID_zamowienia" Type="Int32" />
+                    <asp:Parameter Name="Uzytkownik_ID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="Data" />
+                    <asp:Parameter Name="Status" Type="String" />
+                    <asp:Parameter Name="ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
         </div>

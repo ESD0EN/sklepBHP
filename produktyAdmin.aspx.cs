@@ -18,7 +18,7 @@ namespace sklepBHP
         {
             string nazwa = txtNazwa.Text;
             string opis = txtOpis.Text;
-            int kategoria = katDropDownList.SelectedIndex;
+            int kategoria = Int32.Parse(katDropDownList.Text.Trim());
             string cena = txtCena.Text;
             string stanmag = txtStanMagazynowy.Text;
 
