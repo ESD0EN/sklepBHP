@@ -16,8 +16,8 @@
             <header>
                 <asp:Menu ID="Menu1" runat="server" CssClass="menu">
                     <Items>
-                        <asp:MenuItem Text="Produkty" Value="Produkty"></asp:MenuItem>
-                        <asp:MenuItem Text="Logowanie" Value="Logowanie"></asp:MenuItem>
+                        <asp:MenuItem Text="Produkty" Value="Produkty" NavigateUrl="~/default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Logowanie" Value="Logowanie" NavigateUrl="~/logowanie.aspx"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </header>
