@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace sklepBHP
 {
-    public partial class login : System.Web.UI.Page
+    public partial class logowanie : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace sklepBHP
             DataView dv = (DataView)loginSqlDataSource.Select(DataSourceSelectArguments.Empty);
             int userCount = Convert.ToInt32(dv.Table.Rows[0][0]);
 
-            if (userCount > 0 )
+            if (userCount > 0)
             {
                 DataView roleDataView = (DataView)rolaSqlDataSource.Select(DataSourceSelectArguments.Empty);
                 string role = roleDataView.Table.Rows[0]["Rola"].ToString();
@@ -52,7 +52,7 @@ namespace sklepBHP
         }
         protected void clearTextBox()
         {
-            emailTextBox.Text = null; 
+            emailTextBox.Text = null;
             passwordTextBox.Text = null;
         }
     }

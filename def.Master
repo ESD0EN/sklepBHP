@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="def.master.cs" Inherits="sklepBHP.def" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Sklep BHP</title>
+    <link href="App_Themes/Dark/Dark.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="width:100%">
+        <div class="pudelko">
+            <header>
+                <asp:Menu ID="Menu1" runat="server" CssClass="menu">
+                    <Items>
+                        <asp:MenuItem Text="Produkty" Value="Produkty"></asp:MenuItem>
+                        <asp:MenuItem Text="Logowanie" Value="Logowanie"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                Projekt Aplikacje Internetowe II | Szymon Figger 19720
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
