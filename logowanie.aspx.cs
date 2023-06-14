@@ -20,7 +20,7 @@ namespace sklepBHP
             string email = emailTextBox.Text;
             string password = passwordTextBox.Text;
 
-            string query = "SELECT COUNT(*) FROM Uzytkownicy WHERE Email = @Email AND Haslo = @Haslo";
+            string query = "SELECT ID, Rola FROM Uzytkownicy WHERE Email = @Email AND Haslo = @Haslo";
 
             loginSqlDataSource.SelectCommand = query;
             loginSqlDataSource.SelectParameters.Clear();
@@ -34,13 +34,16 @@ namespace sklepBHP
             {
                 DataView roleDataView = (DataView)rolaSqlDataSource.Select(DataSourceSelectArguments.Empty);
                 string role = roleDataView.Table.Rows[0]["Rola"].ToString();
+
+                Session["UzytkownikID"] = userCount.ToString();
+
                 if (role == "admin")
                 {
                     Response.Redirect("produktyAdmin.aspx");
                 }
                 else
                 {
-                    loginLabel.Text = "todo";
+                    Response.Redirect("produktyUser.aspx");
                 }
                 clearTextBox();
             }

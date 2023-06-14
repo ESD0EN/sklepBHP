@@ -72,8 +72,10 @@
     <Content Include="default.aspx" />
     <Content Include="kategorieAdmin.aspx" />
     <Content Include="klientAdmin.aspx" />
+    <Content Include="koszykUser.aspx" />
     <Content Include="logowanie.aspx" />
     <Content Include="pozycjeZamowieniaAdmin.aspx" />
+    <Content Include="produktyUser.aspx" />
     <Content Include="rejestracja.aspx" />
     <Content Include="zamowieniaAdmin.aspx" />
     <Content Include="produktyAdmin.aspx" />
@@ -108,6 +110,13 @@
     <Compile Include="klientAdmin.aspx.designer.cs">
       <DependentUpon>klientAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="koszykUser.aspx.cs">
+      <DependentUpon>koszykUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="koszykUser.aspx.designer.cs">
+      <DependentUpon>koszykUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="logowanie.aspx.cs">
       <DependentUpon>logowanie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,12 +138,26 @@
     <Compile Include="pozycjeZamowieniaAdmin.aspx.designer.cs">
       <DependentUpon>pozycjeZamowieniaAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="produktyUser.aspx.cs">
+      <DependentUpon>produktyUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="produktyUser.aspx.designer.cs">
+      <DependentUpon>produktyUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="rejestracja.aspx.cs">
       <DependentUpon>rejestracja.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="rejestracja.aspx.designer.cs">
       <DependentUpon>rejestracja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userMaster.Master.cs">
+      <DependentUpon>userMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userMaster.Master.designer.cs">
+      <DependentUpon>userMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="zamowieniaAdmin.aspx.cs">
       <DependentUpon>zamowieniaAdmin.aspx</DependentUpon>
@@ -156,6 +179,7 @@
     <Content Include="masterPageAdmin.Master" />
     <Content Include="def.Master" />
     <None Include="packages.config" />
+    <Content Include="userMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
